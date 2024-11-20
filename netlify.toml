@@ -1,2 +1,8 @@
 [build]
-    functions = "functions"
+  functions = "functions" # Directory for Netlify Functions
+  publish = "dist" # Directory for the build (if applicable)
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/express-api"
+  status = 200
